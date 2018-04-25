@@ -1,0 +1,158 @@
+[Github Class]
+
+* Create a new repository and initialize with readme
+
+* Terminal:
+	user$ cd temp_hs
+	user$ ls
+	git_example.html	udacity_js.txt
+
+	**user$ git clone https://github.com/hsimspace/newGitTest.git
+
+	Cloning into 'newGitTest'...
+	remote: Counting objects: 3, done.
+	remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+	Unpacking objects: 100% (3/3), done.
+	Checking connectivity... done.
+
+	temp_hs user$ ls
+	git_example.html	newGitTest		udacity_js.txt
+
+	**user$ git status [highlights changes between computer/githubspace]
+	On branch master
+	Your branch is up-to-date with 'origin/master'.
+	Untracked files:
+	  (use "git add <file>..." to include in what will be committed)
+
+	index.html
+
+	nothing added to commit but untracked files present (use "git add" to track)
+
+	**user$ git add index.html
+
+	user$ git status
+	
+	On branch master
+	Your branch is up-to-date with 'origin/master'.
+	Changes to be committed:
+	  (use "git reset HEAD <file>..." to unstage)
+	
+		new file:   index.html
+
+	**user$ git commit -m “added index.html” [It is still on our machine]
+
+[master 884a36c] added index.html
+ Committer: user <user@LibLab23.academic.slc.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 17 insertions(+)
+ create mode 100644 index.html
+
+
+	**user$ git push [To add the file to github.com]
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': hsimspace
+Password for 'https://hsimspace@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 425 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/hsimspace/newGitTest.git
+   d35f6e8..884a36c  master -> master
+
+——————————————————————————————————————————————
+
+	**user$ git pull [To download files from github.com]
+
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/hsimspace/newGitTest
+   884a36c..a0826ad  master     -> origin/master
+Updating 884a36c..a0826ad
+Fast-forward
+ index1.html | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+ create mode 100644 index1.html
+
+
+	**git add -A [To add all files and changes to be commited]
+
+
+———————————————————————————————
+
+[Work flow]
+
+a) git pull [So that you can get everyone’s changes before work]
+
+b) git add -A 
+
+c) git commit -m “made mortar more specific”
+
+d) git push
+
+
+——————————————————
+
+
+*** Merging conflict (manually clean up the file)
+
+if you ever hit commit without the dash — hit ; escape wq enter to leave.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
